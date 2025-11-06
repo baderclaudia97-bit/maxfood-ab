@@ -1,0 +1,7 @@
+{
+  "navigation": {"home": "Accueil", "products": "Produits", "private_label": "Marque Privée", "quality": "Qualité", "about": "À Propos", "contact": "Contact"},
+  "home": {"title": "MaxFood AB — Solutions Alimentaires Premium", "description": "Fabricant leader de produits alimentaires haut de gamme certifiés ISO", "hero_title": "Aliments de Qualité Supérieure", "hero_subtitle": "Fabrication premium aux normes internationales", "cta_explore": "Explorer le Catalogue", "cta_contact": "Nous Contacter"},
+  "products": {"title": "Catalogue de Produits", "description": "Découvrez nos gammes de produits alimentaires", "all_products": "Tous les Produits", "no_products": "Aucun produit disponible", "price": "Prix", "contact_for_price": "Demander le prix"},
+  "contact": {"title": "Contact", "description": "Contactez notre équipe", "form_name": "Nom", "form_email": "Email", "form_message": "Message", "form_send": "Envoyer", "form_success": "Message envoyé avec succès!", "form_error": "Erreur lors de l'envoi"},
+  "footer": {"company_name": "MaxFood AB", "rights": "Tous droits réservés", "privacy": "Confidentialité", "terms": "Conditions"}
+}

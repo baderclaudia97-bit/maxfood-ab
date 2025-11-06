@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <!-- Homepage for each language -->
+  <url>
+    <loc>https://maxfood.se/es</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://maxfood.se/es" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://maxfood.se/sv" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxfood.se/en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maxfood.se/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://maxfood.se/de" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://maxfood.se/ar" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://maxfood.se/zh" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://maxfood.se/ja" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxfood.se/en" />
+  </url>
+
+  <url>
+    <loc>https://maxfood.se/sv</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://maxfood.se/es" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://maxfood.se/sv" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxfood.se/en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maxfood.se/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://maxfood.se/de" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://maxfood.se/ar" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://maxfood.se/zh" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://maxfood.se/ja" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxfood.se/en" />
+  </url>
+
+  <url>
+    <loc>https://maxfood.se/en</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://maxfood.se/es" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://maxfood.se/sv" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxfood.se/en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maxfood.se/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://maxfood.se/de" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://maxfood.se/ar" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://maxfood.se/zh" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://maxfood.se/ja" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxfood.se/en" />
+  </url>
+
+  <url>
+    <loc>https://maxfood.se/fr</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://maxfood.se/es" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://maxfood.se/sv" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxfood.se/en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maxfood.se/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://maxfood.se/de" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://maxfood.se/ar" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://maxfood.se/zh" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://maxfood.se/ja" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxfood.se/en" />
+  </url>
+
+  <url>
+    <loc>https://maxfood.se/de</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://maxfood.se/es" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://maxfood.se/sv" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxfood.se/en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maxfood.se/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://maxfood.se/de" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://maxfood.se/ar" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://maxfood.se/zh" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://maxfood.se/ja" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxfood.se/en" />
+  </url>
+
+  <url>
+    <loc>https://maxfood.se/ar</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://maxfood.se/es" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://maxfood.se/sv" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxfood.se/en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maxfood.se/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://maxfood.se/de" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://maxfood.se/ar" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://maxfood.se/zh" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://maxfood.se/ja" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxfood.se/en" />
+  </url>
+
+  <url>
+    <loc>https://maxfood.se/zh</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://maxfood.se/es" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://maxfood.se/sv" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxfood.se/en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maxfood.se/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://maxfood.se/de" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://maxfood.se/ar" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://maxfood.se/zh" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://maxfood.se/ja" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxfood.se/en" />
+  </url>
+
+  <url>
+    <loc>https://maxfood.se/ja</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://maxfood.se/es" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://maxfood.se/sv" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxfood.se/en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://maxfood.se/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://maxfood.se/de" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://maxfood.se/ar" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://maxfood.se/zh" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://maxfood.se/ja" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxfood.se/en" />
+  </url>
+
+  <!-- Products Page -->
+  <url>
+    <loc>https://maxfood.se/en/products</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://maxfood.se/en/contact</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://maxfood.se/en/about</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://maxfood.se/en/privacy</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

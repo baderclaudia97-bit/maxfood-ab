@@ -1,0 +1,42 @@
+{
+  "navigation": {
+    "home": "Hem",
+    "products": "Produkter",
+    "private_label": "Privat Etikett",
+    "quality": "Kvalitet",
+    "about": "Om Oss",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "title": "MaxFood AB — Premium Livsmedelsslösningar",
+    "description": "Ledande tillverkare av högkvalitativa livsmedel med ISO-certifiering",
+    "hero_title": "Livsmedel av Högsta Kvalitet",
+    "hero_subtitle": "Premium tillverkning med internationella standarder",
+    "cta_explore": "Utforska Katalog",
+    "cta_contact": "Kontakta Oss"
+  },
+  "products": {
+    "title": "Produktkatalog",
+    "description": "Upptäck våra livsmedelsproduktlinjer",
+    "all_products": "Alla Produkter",
+    "no_products": "Inga produkter tillgängliga",
+    "price": "Pris",
+    "contact_for_price": "Fråga om pris"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Kontakta vårt team",
+    "form_name": "Namn",
+    "form_email": "E-post",
+    "form_message": "Meddelande",
+    "form_send": "Skicka",
+    "form_success": "Meddelande skickat framgångsrikt!",
+    "form_error": "Fel vid sändning av meddelande"
+  },
+  "footer": {
+    "company_name": "MaxFood AB",
+    "rights": "Alla rättigheter förbehållna",
+    "privacy": "Sekretess",
+    "terms": "Villkor"
+  }
+}

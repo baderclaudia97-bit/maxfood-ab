@@ -1,0 +1,51 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "products": "Productos",
+    "private_label": "Marca Privada",
+    "quality": "Calidad",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "home": {
+    "title": "MaxFood AB — Soluciones Alimentarias Premium",
+    "description": "Fabricante líder de productos alimentarios de alta calidad con certificación ISO",
+    "hero_title": "Alimentos de Calidad Superior",
+    "hero_subtitle": "Manufactura premium con estándares internacionales",
+    "cta_explore": "Explorar Catálogo",
+    "cta_contact": "Contactar"
+  },
+  "products": {
+    "title": "Catálogo de Productos",
+    "description": "Descubre nuestras líneas de productos alimentarios",
+    "all_products": "Todos los Productos",
+    "no_products": "No hay productos disponibles",
+    "price": "Precio",
+    "contact_for_price": "Solicitar precio"
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Ponte en contacto con nuestro equipo",
+    "form_name": "Nombre",
+    "form_email": "Correo Electrónico",
+    "form_message": "Mensaje",
+    "form_send": "Enviar",
+    "form_success": "¡Mensaje enviado exitosamente!",
+    "form_error": "Error al enviar el mensaje"
+  },
+  "footer": {
+    "company_name": "MaxFood AB",
+    "rights": "Todos los derechos reservados",
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  },
+  "gdpr": {
+    "title": "Aviso de Cookies y Privacidad",
+    "description": "Utilizamos cookies para mejorar tu experiencia y analizar el tráfico. Al hacer clic en 'Aceptar Todo', consientes nuestro uso de cookies.",
+    "privacy_link": "Más información en nuestra Política de Privacidad",
+    "reject_all": "Rechazar Todo",
+    "accept_analytics": "Aceptar Analytics",
+    "accept_all": "Aceptar Todo",
+    "manage_preferences": "Gestionar Preferencias"
+  }
+}

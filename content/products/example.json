@@ -1,0 +1,12 @@
+{
+  "title": "Premium Organic Beverage",
+  "description": "High-quality organic beverage made with natural ingredients",
+  "sku": "BEV-001",
+  "category": "beverage",
+  "format": "1L bottle",
+  "weight": "1000g",
+  "price": 12.99,
+  "image": "/uploads/product-1.jpg",
+  "ingredients": "Filtered water, organic fruit concentrate, natural flavoring",
+  "status": "available"
+}
