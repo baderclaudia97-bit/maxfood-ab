@@ -1,9 +1,8 @@
-import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
-const withNextIntl = createNextIntlPlugin();
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   // Image optimization
   images: {
     formats: ["image/avif", "image/webp"],
@@ -27,22 +26,7 @@ const nextConfig: NextConfig = {
   
   // Experimental features
   experimental: {
-    instrumentationHook: true,
     optimizePackageImports: ["@radix-ui/react-icons"],
-    isrMemoryCacheSize: 52 * 1024 * 1024, // 52 MB
-  },
-
-  // Turbopack for faster builds
-  turbopack: {
-    resolveAlias: {
-      "@": "./src",
-    },
-  },
-
-  // Internationalization
-  i18n: {
-    locales: ["es", "sv", "en", "fr", "de", "ar", "zh", "ja"],
-    defaultLocale: "en",
   },
 
   // Security headers
@@ -118,9 +102,6 @@ const nextConfig: NextConfig = {
     NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXXXX",
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || "https://maxfood.se",
   },
-
-  // Internationalization plugin
-  ...withNextIntl,
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);
