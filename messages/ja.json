@@ -1,7 +1,17 @@
 {
-  "navigation": {"home": "ホーム", "products": "製品", "private_label": "プライベートレーベル", "quality": "品質", "about": "について", "contact": "お問い合わせ"},
-  "home": {"title": "MaxFood AB — プレミアム食品ソリューション", "description": "ISO認証取得の高品質食品製品の主要メーカー", "hero_title": "最高品質の食品", "hero_subtitle": "国際基準に準拠したプレミアム製造", "cta_explore": "カタログを見る", "cta_contact": "お問い合わせ"},
-  "products": {"title": "製品カタログ", "description": "当社の食品製品ラインをご覧ください", "all_products": "すべての製品", "no_products": "利用可能な製品がありません", "price": "価格", "contact_for_price": "価格をお問い合わせください"},
-  "contact": {"title": "お問い合わせ", "description": "チームにお問い合わせください", "form_name": "名前", "form_email": "メール", "form_message": "メッセージ", "form_send": "送信", "form_success": "メッセージが正常に送信されました!", "form_error": "メッセージ送信時にエラーが発生しました"},
-  "footer": {"company_name": "MaxFood AB", "rights": "著作権所有", "privacy": "プライバシー", "terms": "条項"}
+  "navigation": {
+    "home": "ホーム",
+    "products": "製品",
+    "about": "について",
+    "contact": "お問い合わせ",
+    "blog": "ブログ"
+  },
+  "hero": {
+    "title": "プレミアムヨーロッパ食品",
+    "subtitle": "ストックホルムからヨーロッパへの品質"
+  },
+  "footer": {
+    "company": "MaxFood AB",
+    "rights": "著作権所有"
+  }
 }

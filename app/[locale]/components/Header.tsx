@@ -1,8 +1,14 @@
-import { useTranslations } from "next-intl";
-import { useTranslations } from "next-intl";
-import { Link } from "@/navigation";
-import { Locale } from "@/app/layout";
-import GlobalSearch from "./GlobalSearch";
+'use client';
+
+import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+
+interface HeaderProps {
+  locale: string;
+}
+
+export default function Header({ locale }: HeaderProps) {
+  const t = useTranslations();
 
   return (
     <header className="sticky top-0 z-50 bg-black border-b border-gray-800">
@@ -23,41 +29,38 @@ import GlobalSearch from "./GlobalSearch";
             href="/"
             className="text-gray-300 hover:text-white transition font-medium"
           >
-            {t("navigation.home")}
+            {t('navigation.home')}
           </Link>
           <Link
             href="/products"
             className="text-gray-300 hover:text-white transition font-medium"
           >
-            {t("navigation.products")}
+            {t('navigation.products')}
           </Link>
           <Link
             href="/blog"
             className="text-gray-300 hover:text-white transition font-medium"
           >
-            Blog
+            {t('navigation.blog')}
           </Link>
           <Link
             href="/about"
             className="text-gray-300 hover:text-white transition font-medium"
           >
-            {t("navigation.about")}
+            {t('navigation.about')}
           </Link>
           <Link
             href="/contact"
             className="text-gray-300 hover:text-white transition font-medium"
           >
-            {t("navigation.contact")}
+            {t('navigation.contact')}
           </Link>
         </div>
 
-        {/* Search and Language */}
+        {/* Language Selector */}
         <div className="flex items-center gap-4">
-          <div className="hidden md:block">
-            <GlobalSearch locale={locale} />
-          </div>
           <select
-            value={locale}
+            defaultValue={locale}
             onChange={(e) => {
               window.location.href = `/${e.target.value}`;
             }}

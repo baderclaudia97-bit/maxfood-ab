@@ -6,7 +6,7 @@ const nextConfig = {
   // Image optimization
   images: {
     formats: ["image/avif", "image/webp"],
-    unoptimized: true, // Required for Netlify deployment
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -17,13 +17,14 @@ const nextConfig = {
         hostname: "cdn.maxfood.se",
       },
     ],
-    minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
+    minimumCacheTTL: 60 * 60 * 24 * 365,
   },
 
   // Build optimization
   productionBrowserSourceMaps: false,
   optimizeFonts: true,
-  
+  swcMinify: true,
+
   // Experimental features
   experimental: {
     optimizePackageImports: ["@radix-ui/react-icons"],
@@ -54,6 +55,10 @@ const nextConfig = {
           key: "Permissions-Policy",
           value: "geolocation=(), microphone=(), camera=()",
         },
+        {
+          key: "Cache-Control",
+          value: "public, max-age=3600, stale-while-revalidate=86400",
+        },
       ],
     },
   ],
@@ -63,11 +68,6 @@ const nextConfig = {
     {
       source: "/",
       destination: "/en",
-      permanent: false,
-    },
-    {
-      source: "/admin",
-      destination: "/admin/index.html",
       permanent: false,
     },
   ],

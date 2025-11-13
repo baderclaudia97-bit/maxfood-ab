@@ -1,15 +1,14 @@
-import { getRequestConfig } from 'next-intl/server';
-import { Locale, locales, defaultLocale } from '@/app/i18n-config';
+import {getRequestConfig} from 'next-intl/server';
 
-export default getRequestConfig(async ({ locale }) => {
-  // Validate that the incoming locale is valid
-  if (!locales.includes(locale as Locale)) {
-    return { messages: {} };
+export default getRequestConfig(async ({requestLocale}) => {
+  let locale = await requestLocale;
+  
+  // Ensure locale is valid
+  if (!locale) {
+    locale = 'en';
   }
 
   return {
-    messages: (await import(`@/messages/${locale}.json`)).default,
-    timeZone: 'UTC',
-    now: new Date(),
+    messages: (await import(`../messages/${locale}.json`)).default
   };
 });

@@ -11,6 +11,11 @@ import {
 } from "@/types/blog";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { setRequestLocale } from "next-intl/server";
+
+// Enable static rendering with next-intl
+export const dynamicParams = true;
+export const revalidate = 3600; // Revalidate every hour
 
 interface PageProps {
   params: Promise<{ locale: Locale; slug: string }>;
@@ -53,6 +58,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function BlogPostPage({ params }: PageProps) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const post = sampleBlogPosts.find(
     (p) => p.slug === slug && p.locale === locale
   );
@@ -222,8 +228,16 @@ export default async function BlogPostPage({ params }: PageProps) {
 
 // Generate static params for known posts
 export async function generateStaticParams() {
-  return sampleBlogPosts.map((post) => ({
-    slug: post.slug,
-    locale: post.locale,
-  }));
+  const locales: Locale[] = ["en", "es", "sv", "fr", "de", "ar", "zh", "ja"];
+  const params: Array<{ locale: Locale; slug: string }> = [];
+  
+  locales.forEach((locale) => {
+    sampleBlogPosts
+      .filter((post) => post.locale === locale)
+      .forEach((post) => {
+        params.push({ locale, slug: post.slug });
+      });
+  });
+  
+  return params;
 }

@@ -1,213 +1,71 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
-import "./globals.css";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { generateOrganizationSchema } from "@/lib/schema";
-import GDPRBanner from "@/app/[locale]/components/GDPRBanner";
+import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
+import "@/app/globals.css";
 
-const interSans = Inter({
-  variable: "--font-inter-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
+export type Locale = "en" | "es" | "sv" | "fr" | "de" | "ar" | "zh" | "ja";
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-// Locales soportados
-export const LOCALES = ["es", "sv", "en", "fr", "de", "ar", "zh", "ja"] as const;
-export type Locale = (typeof LOCALES)[number];
-
-// Metadata base por idioma
-const metadataByLocale: Record<Locale, { title: string; description: string }> = {
-  es: {
-    title: "MaxFood AB — Soluciones Alimentarias Premium",
-    description: "Fabricante líder de productos alimentarios de alta calidad con certificación ISO. Bebidas, snacks, lácteos y soluciones de etiqueta privada.",
+export const metadata: Metadata = {
+  title: "MaxFood AB | Premium Food Products",
+  description: "MaxFood AB - Premium European food products distributor. Available in 8 languages.",
+  keywords: "food, premium, european, maxfood, ab, distributor",
+  authors: [{ name: "MaxFood AB" }],
+  creator: "MaxFood AB",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    url: "https://maxfood.se",
+    title: "MaxFood AB | Premium Food Products",
+    description: "Premium European food products",
+    siteName: "MaxFood AB",
   },
-  sv: {
-    title: "MaxFood AB — Premium Livsmedelslösningar",
-    description: "Ledande producent av högkvalitativa livsmedelsprodukter med ISO-certifiering. Drycker, snacks, mejerivaror och privatmärkeslösningar.",
-  },
-  en: {
-    title: "MaxFood AB — Premium Food Solutions",
-    description: "Leading manufacturer of high-quality food products with ISO certification. Beverages, snacks, dairy products, and private label solutions.",
-  },
-  fr: {
-    title: "MaxFood AB — Solutions Alimentaires Premium",
-    description: "Fabricant leader de produits alimentaires haut de gamme certifiés ISO. Boissons, collations, produits laitiers et solutions de marque privée.",
-  },
-  de: {
-    title: "MaxFood AB — Premium-Lebensmittellösungen",
-    description: "Führender Hersteller hochwertiger Lebensmittelprodukte mit ISO-Zertifizierung. Getränke, Snacks, Milchprodukte und White-Label-Lösungen.",
-  },
-  ar: {
-    title: "MaxFood AB — حلول غذائية متميزة",
-    description: "مصنع رائد للمنتجات الغذائية عالية الجودة معتمد ISO. المشروبات والوجبات الخفيفة ومنتجات الألبان والحلول ذات العلامات الخاصة.",
-  },
-  zh: {
-    title: "MaxFood AB — 优质食品解决方案",
-    description: "ISO认证的高品质食品产品领先制造商。饮料、零食、乳制品和自有品牌解决方案。",
-  },
-  ja: {
-    title: "MaxFood AB — プレミアム食品ソリューション",
-    description: "ISO認証の高品質食品製品を製造する業界リーダー。飲料、スナック、乳製品、プライベートブランドソリューション。",
+  twitter: {
+    card: "summary_large_image",
+    title: "MaxFood AB",
+    description: "Premium European food products",
   },
 };
 
-interface LocaleLayoutProps {
-  children: React.ReactNode;
-  params: Promise<{ locale: Locale }>;
-}
-
-export async function generateStaticParams() {
-  return LOCALES.map((locale) => ({
-    locale,
-  }));
-}
-
-export async function generateMetadata(
-  props: LocaleLayoutProps
-): Promise<Metadata> {
-  const params = await props.params;
-  const { locale } = params;
-
-  if (!LOCALES.includes(locale)) {
-    notFound();
-  }
-
-  const meta = metadataByLocale[locale];
-  const siteUrl = "https://maxfood.se";
-  const alternates = LOCALES.reduce(
-    (acc, loc) => ({
-      ...acc,
-      [loc]: `${siteUrl}/${loc}`,
-    }),
-    {}
-  );
-
-  return {
-    title: meta.title,
-    description: meta.description,
-    metadataBase: new URL(siteUrl),
-    alternates: {
-      languages: alternates as any,
-      canonical: `${siteUrl}/${locale}`,
-    },
-    openGraph: {
-      title: meta.title,
-      description: meta.description,
-      url: `${siteUrl}/${locale}`,
-      siteName: "MaxFood AB",
-      type: "website",
-      images: [
-        {
-          url: `${siteUrl}/og-image.png`,
-          width: 1200,
-          height: 630,
-          alt: "MaxFood AB",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: meta.title,
-      description: meta.description,
-      images: [`${siteUrl}/twitter-image.png`],
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-  };
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function RootLayout({
   children,
   params,
-}: LocaleLayoutProps & { params: Promise<{ locale: Locale }> }) {
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
 
-  if (!LOCALES.includes(locale)) {
+  if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
-  const messages = await getMessages();
-
-  // Determine text direction based on locale (RTL for Arabic)
-  const isRTL = locale === "ar";
-  const direction = isRTL ? "rtl" : "ltr";
+  const t = await getTranslations({ locale });
 
   return (
-    <html lang={locale} dir={direction}>
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <head>
-        {/* Hreflang alternates para SEO multiidioma */}
-        {LOCALES.map((loc) => (
-          <link
-            key={loc}
-            rel="alternate"
-            hrefLang={loc}
-            href={`https://maxfood.se/${loc}`}
-          />
-        ))}
-        {/* Hreflang x-default */}
-        <link
-          rel="alternate"
-          hrefLang="x-default"
-          href="https://maxfood.se/en"
-        />
-        
-        {/* Viewport y otros meta tags */}
         <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=5"
-        />
-        
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        
-        {/* PWA Manifest */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
-        
-        {/* Theme color */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href={`https://maxfood.se/${locale}`} />
+        <link rel="alternate" hrefLang="es" href="https://maxfood.se/es" />
+        <link rel="alternate" hrefLang="sv" href="https://maxfood.se/sv" />
+        <link rel="alternate" hrefLang="en" href="https://maxfood.se/en" />
+        <link rel="alternate" hrefLang="fr" href="https://maxfood.se/fr" />
+        <link rel="alternate" hrefLang="de" href="https://maxfood.se/de" />
+        <link rel="alternate" hrefLang="ar" href="https://maxfood.se/ar" />
+        <link rel="alternate" hrefLang="zh" href="https://maxfood.se/zh" />
+        <link rel="alternate" hrefLang="ja" href="https://maxfood.se/ja" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#000000" />
-        <meta name="background-color" content="#ffffff" />
-
-        {/* JSON-LD Organization Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateOrganizationSchema()),
-          }}
-        />
       </head>
-      <body
-        className={`${interSans.variable} ${jetbrainsMono.variable} antialiased bg-black text-white`}
-      >
-        <NextIntlClientProvider messages={messages}>
-          {children}
-          <GDPRBanner />
-        </NextIntlClientProvider>
-        
-        {/* Service Worker registration */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js')
-                  .then(() => console.log('✅ Service Worker registered'))
-                  .catch(() => console.log('⚠️ Service Worker registration failed'));
-              }
-            `,
-          }}
-        />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

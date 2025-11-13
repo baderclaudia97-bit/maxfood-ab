@@ -23,6 +23,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     total: 0,
     tax: 0,
     shipping: 0,
+    updatedAt: new Date().toISOString(),
   });
 
   // Load cart from localStorage

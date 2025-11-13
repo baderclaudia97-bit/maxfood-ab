@@ -1,7 +1,17 @@
 {
-  "navigation": {"home": "الرئيسية", "products": "المنتجات", "private_label": "العلامة الخاصة", "quality": "الجودة", "about": "حول الشركة", "contact": "اتصل بنا"},
-  "home": {"title": "MaxFood AB — حلول غذائية فاخرة", "description": "الشركة المصنعة الرائدة للمنتجات الغذائية عالية الجودة المعتمدة من ISO", "hero_title": "أغذية عالية الجودة", "hero_subtitle": "التصنيع الفاخر بالمعايير الدولية", "cta_explore": "استكشف الكتالوج", "cta_contact": "اتصل بنا الآن"},
-  "products": {"title": "كتالوج المنتجات", "description": "اكتشف خطوط المنتجات الغذائية لدينا", "all_products": "جميع المنتجات", "no_products": "لا توجد منتجات متاحة", "price": "السعر", "contact_for_price": "اسأل عن السعر"},
-  "contact": {"title": "اتصل بنا", "description": "تواصل مع فريقنا", "form_name": "الاسم", "form_email": "البريد الإلكتروني", "form_message": "الرسالة", "form_send": "إرسال", "form_success": "تم إرسال الرسالة بنجاح!", "form_error": "حدث خطأ في الإرسال"},
-  "footer": {"company_name": "MaxFood AB", "rights": "جميع الحقوق محفوظة", "privacy": "الخصوصية", "terms": "الشروط"}
+  "navigation": {
+    "home": "الرئيسية",
+    "products": "المنتجات",
+    "about": "عن",
+    "contact": "تواصل",
+    "blog": "مدونة"
+  },
+  "hero": {
+    "title": "منتجات غذائية أوروبية راقية",
+    "subtitle": "الجودة من ستوكهولم إلى أوروبا"
+  },
+  "footer": {
+    "company": "MaxFood AB",
+    "rights": "جميع الحقوق محفوظة"
+  }
 }

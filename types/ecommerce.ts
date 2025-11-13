@@ -160,6 +160,7 @@ export function validateCustomerInfo(info: CustomerInfo): boolean {
 
 // Generate order confirmation
 export function generateOrderConfirmation(order: Order): string {
+  const shippingCost = typeof order.shipping === 'object' ? order.shipping.cost : 0;
   return `
     Order Confirmation #${order.id}
     
@@ -171,8 +172,8 @@ export function generateOrderConfirmation(order: Order): string {
       .map((item) => `- ${item.name} x${item.quantity} = ${formatPrice(item.price * item.quantity)}`)
       .join("\n")}
     
-    Subtotal: ${formatPrice(order.total - order.shipping)}
-    Shipping: ${formatPrice(order.shipping)}
+    Subtotal: ${formatPrice(order.total - shippingCost)}
+    Shipping: ${formatPrice(shippingCost)}
     Total: ${formatPrice(order.total)}
     
     Status: ${order.status}

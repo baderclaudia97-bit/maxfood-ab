@@ -1,7 +1,17 @@
 {
-  "navigation": {"home": "首页", "products": "产品", "private_label": "自有品牌", "quality": "质量", "about": "关于我们", "contact": "联系"},
-  "home": {"title": "MaxFood AB — 优质食品解决方案", "description": "ISO认证的优质食品产品领先制造商", "hero_title": "优质食品", "hero_subtitle": "符合国际标准的优质制造", "cta_explore": "浏览目录", "cta_contact": "联系我们"},
-  "products": {"title": "产品目录", "description": "发现我们的食品产品线", "all_products": "所有产品", "no_products": "无可用产品", "price": "价格", "contact_for_price": "咨询价格"},
-  "contact": {"title": "联系", "description": "与我们的团队联系", "form_name": "姓名", "form_email": "电子邮件", "form_message": "消息", "form_send": "发送", "form_success": "消息发送成功!", "form_error": "发送出错"},
-  "footer": {"company_name": "MaxFood AB", "rights": "版权所有", "privacy": "隐私", "terms": "条款"}
+  "navigation": {
+    "home": "主页",
+    "products": "产品",
+    "about": "关于",
+    "contact": "联系",
+    "blog": "博客"
+  },
+  "hero": {
+    "title": "优质欧洲食品",
+    "subtitle": "从斯德哥尔摩到欧洲的品质"
+  },
+  "footer": {
+    "company": "MaxFood AB",
+    "rights": "版权所有"
+  }
 }

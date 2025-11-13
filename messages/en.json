@@ -2,50 +2,16 @@
   "navigation": {
     "home": "Home",
     "products": "Products",
-    "private_label": "Private Label",
-    "quality": "Quality",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "blog": "Blog"
   },
-  "home": {
-    "title": "MaxFood AB — Premium Food Solutions",
-    "description": "Leading manufacturer of high-quality food products with ISO certification",
-    "hero_title": "Superior Quality Foods",
-    "hero_subtitle": "Premium manufacturing with international standards",
-    "cta_explore": "Explore Catalog",
-    "cta_contact": "Get in Touch"
-  },
-  "products": {
-    "title": "Product Catalog",
-    "description": "Discover our food product lines",
-    "all_products": "All Products",
-    "no_products": "No products available",
-    "price": "Price",
-    "contact_for_price": "Inquire for pricing"
-  },
-  "contact": {
-    "title": "Contact",
-    "description": "Get in touch with our team",
-    "form_name": "Name",
-    "form_email": "Email",
-    "form_message": "Message",
-    "form_send": "Send",
-    "form_success": "Message sent successfully!",
-    "form_error": "Error sending message"
+  "hero": {
+    "title": "Premium European Food Products",
+    "subtitle": "Quality from Stockholm to Europe"
   },
   "footer": {
-    "company_name": "MaxFood AB",
-    "rights": "All rights reserved",
-    "privacy": "Privacy",
-    "terms": "Terms"
-  },
-  "gdpr": {
-    "title": "Cookie & Privacy Notice",
-    "description": "We use cookies to enhance your experience and analyze site traffic. By clicking 'Accept All', you consent to our use of cookies.",
-    "privacy_link": "Learn more in our Privacy Policy",
-    "reject_all": "Reject All",
-    "accept_analytics": "Accept Analytics",
-    "accept_all": "Accept All",
-    "manage_preferences": "Manage Preferences"
+    "company": "MaxFood AB",
+    "rights": "All rights reserved"
   }
 }

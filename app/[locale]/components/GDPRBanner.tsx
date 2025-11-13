@@ -5,6 +5,13 @@ import { useTranslations } from "next-intl";
 
 type ConsentMode = "all" | "analytics" | "none";
 
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
+
 export default function GDPRBanner() {
   const t = useTranslations();
   const [isVisible, setIsVisible] = useState(false);
@@ -37,10 +44,11 @@ export default function GDPRBanner() {
     script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
     document.head.appendChild(script);
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      (window.dataLayer as unknown[]).push(arguments);
-    }
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    const gtag = (...args: any[]) => {
+      ((window as any).dataLayer as any[]).push(args);
+    };
+
     gtag("js", new Date());
 
     // Consent mode setup
